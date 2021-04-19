@@ -32,7 +32,7 @@ def sendmail(travelbooking,company,mode, receiver):
     pdf.cell(ln=1, h=5.0, align='L', w=0, txt=content, border=0)
     pdf.cell(ln=1, h=5.0, align='L', w=0, txt="\n", border=0)
     
-    content="Date of Departure: "+str(travelbooking.deaprt_date)
+    content="Date of Departure: "+str(travelbooking.depart_date)
     pdf.cell(ln=1, h=5.0, align='L', w=0, txt=content, border=0)
     pdf.cell(ln=1, h=5.0, align='L', w=0, txt="\n", border=0)
 
