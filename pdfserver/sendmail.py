@@ -1,7 +1,8 @@
 import yagmail
 from fpdf import FPDF
 
-yagmail.register('kdeepthi8569@gmail.com', 'iamdeepti')
+#enter a valid email and password which is logged in your system
+yagmail.register('emailid', 'password')
 
 def sendmail(travelbooking,company,mode, receiver):
     #generatetravel(travelbooking,company)
@@ -51,7 +52,7 @@ def sendmail(travelbooking,company,mode, receiver):
     filename=str(travelbooking.booking_id)+".pdf"
     pdf.output(filename,'F')
     body="Please find attached your tickets. Bon Voyage!"
-    yag = yagmail.SMTP("mohan666420@gmail.com")
+    yag = yagmail.SMTP("emailid")
     yag.send(
         to=receiver,
         subject="Your reservation has been confirmed",
@@ -111,7 +112,7 @@ def hotelreservation(hoteldetails,hotelbooking,roomtype,receiver):
     filename=str(hotelbooking.booking_id)+".pdf"
     pdf.output(filename,'F')
     body="Please find attached your hotel reservation details. Enjoy your stay!"
-    yag = yagmail.SMTP("mohan666420@gmail.com")
+    yag = yagmail.SMTP("emailid")
     yag.send(
         to=receiver,
         subject="Your reservation has been confirmed",
